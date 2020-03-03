@@ -1,0 +1,54 @@
+.blogHome {
+}
+
+.blogHeader {
+  position: relative;
+  overflow: hidden;
+}
+
+// .blogHeader img {
+//     position: relative;
+// }
+
+
+.blogHeaderCopy {
+  font-size: calc(8px + 0.8vw);
+  position: absolute;
+  text-align: left;
+  width: 40%;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  padding: 1rem 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, white 0%, rgba(255, 227, 227, 0.60688) 57%);
+  opacity: 0.8;
+  border-radius: 5px;
+  z-index:5;
+}
+
+// .blogHeaderCopy h1 {
+//     text-align: left;
+// }
+
+.blogList {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media all and (min-width: 599px) {
+
+// Fades the Bottom of the Hero header
+.blogHeader div div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), white 99%);
+    width: 100%;
+    height: 2em;
+}
+
+}
