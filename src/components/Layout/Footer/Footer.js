@@ -10,6 +10,7 @@ const Footer = (props) => {
     padding: '1em',
     }
   
+    
   return(
         
   <footer style={style}>
