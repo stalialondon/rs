@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import EntryCSS from "./BlogEntry.module.scss"
+import Button from "../Buttons/PrimaryButtonLink"
 
 const BlogEntry = props => {
   const {
@@ -37,10 +38,8 @@ const BlogEntry = props => {
           )
         })}
         <p>{`${description.description.substr(0, 200)}...`}</p>
+        <Button label={"Read More"} link={`/blog/${slug}`} />
 
-        <Link to={`/blog/${slug}`}>
-          <button className={EntryCSS.readmorebutton}>Read More</button>
-        </Link>
       </div>
     </div>
   )

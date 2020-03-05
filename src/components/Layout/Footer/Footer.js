@@ -1,24 +1,19 @@
 import React from "react";
-import S from "./Footer.scss";
+import styles from "./Footer.module.scss";
+import SocialWidget from "../../Tools/SocialWidget/SocialWidget";
 
 const Footer = (props) => {
-  
-  const style = {
-    background: "rgb(32, 32, 32)",
-    color: 'white',
-    // textAlign: 'center',
-    padding: '1em',
-    }
-  
-    
-  return(
-        
-  <footer style={style}>
-    © {new Date().getFullYear()},
-    {` `}
-    {props.siteName}
-  </footer>
 
-)
-  }
+  return (
+
+    <footer className={styles.footer}>
+      <div className={styles.copyright}>© {new Date().getFullYear()},
+        {` `}
+        {props.siteName}
+      </div>
+      <SocialWidget />
+    </footer>
+
+  )
+}
 export default Footer

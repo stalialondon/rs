@@ -29,7 +29,7 @@ export default ({ data }) => {
         </div>
         <div className={Styles.categories}>
           {blogData.categories.map(category => (
-            <span>{category.name}</span>
+            <span key={category.id}>{category.name}</span>
           ))}
         </div>
         <Img
@@ -37,7 +37,7 @@ export default ({ data }) => {
           alt={blogData.blogMainImage.description}
         />
         <div
-          class={Styles.blogMainContent}
+          className={Styles.blogMainContent}
           dangerouslySetInnerHTML={{
             __html: blogData.blogContent.childMarkdownRemark.html,
           }}
@@ -54,6 +54,7 @@ export const query = graphql`
       slug
       title
       categories {
+        id
         name
       }
       blogMainImage {
