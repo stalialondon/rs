@@ -1,0 +1,15 @@
+.commentlike {
+  display: flex;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: grey;
+    margin: 0 0 0 4px;
+    align-self: center;
+  }
+}
+.likes {
+  margin: 0 0 0 auto;
+}

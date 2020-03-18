@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../Layout/layout"
 import SEO from "../seo"
 import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
 import Styles from "./BlogTemplate.module.scss"
+import CommentForm from "./Comments/CommentForm"
+import CommentList from "./Comments/CommentList"
+import BlogClap from "./BlogClap/BlogClap"
 
 export default ({ data }) => {
   const blogData = data.contentfulBlogPosts
@@ -26,7 +29,9 @@ export default ({ data }) => {
               {blogData.blogContent.childMarkdownRemark.timeToRead} Min Read
             </p>
           </div>
+
         </div>
+        <BlogClap style={{ padding: "0em" }} id={blogData.id} />
         <div className={Styles.categories}>
           {blogData.categories.map(category => (
             <span key={category.id}>{category.name}</span>
@@ -43,6 +48,13 @@ export default ({ data }) => {
           }}
         />
       </article>
+      <section className={Styles.clapcontainer}>
+        <BlogClap id={blogData.id} />
+      </section>
+      <section className={Styles.comments}>
+        <CommentForm id={blogData.id} />
+        <CommentList id={blogData.id} />
+      </section>
     </Layout>
   )
 }

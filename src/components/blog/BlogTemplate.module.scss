@@ -32,7 +32,7 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
-  margin: 1em 0;
+  margin: 0 0 1em;
 }
 
 .categories span {
@@ -98,4 +98,16 @@
   text-align: center;
   border: solid 1px;
   padding: 0.5em 0.1em;
+}
+
+.comments {
+  padding: 1em;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.clapcontainer {
+  padding: 0em 1em;
+  margin: 0 auto;
+  max-width: 768px;
 }

@@ -1,0 +1,22 @@
+.commentcontainer {
+  border-bottom: 1px lightgrey solid;
+  padding: 1em 0;
+  p {
+    margin-bottom: 0;
+  }
+}
+.commentdetails {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.commenter {
+  font-weight: bold;
+}
+
+.comment {
+  margin-bottom: 0;
+}
+.commenttime {
+  font-size: 0.8em;
+  margin-left: 1em;
+}

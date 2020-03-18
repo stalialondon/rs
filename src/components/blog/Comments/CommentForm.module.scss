@@ -1,0 +1,24 @@
+.commentform {
+  display: block;
+  max-width: 500px;
+}
+
+.name,
+.comment {
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  resize: none;
+}
+
+.button {
+  border: 1px solid black;
+  background: none;
+  box-shadow: none;
+  padding: 0.5em 1em;
+  &:hover {
+    color: white;
+    background: black;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../../../basestyles.scss";
+
+.blogclaps {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  font-family: $secondaryfont;
+  padding: 0em 0em 1em;
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: grey;
+    margin: 0 0 0 4px;
+    align-self: center;
+    transition: all ease-in-out 0.5s;
+    g,
+    path {
+      transition: all ease-in-out 0.25s;
+    }
+  }
+}
+.claps {
+  margin-left: 1em;
+  font-size: 0.8em;
+}
+
+.clapicon {
+  border: solid 1px lightgrey;
+  padding: 0.25em;
+  border-radius: 500px;
+  transition: all ease-in-out 0.5s;
+  &:hover {
+    border-color: $secondarycolor;
+    box-shadow: 0px 0px 10px $secondarycolor;
+
+    svg,
+    g,
+    path {
+      fill: $secondarycolor !important;
+    }
+  }
+}
